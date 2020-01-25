@@ -17,6 +17,22 @@ I
       I
 */
 
-function drawStairs(n) {
-  // your code here
+const drawStairs = (n) => {
+  let answer = '';
+  let space = ' ';
+  if(n === 1) {
+    return 'I';
+  }
+
+  for(let i = 0; i < n; i++) {
+    if(i === n - 1) {
+      answer = answer + 'I';
+    }
+    if(i < n - 1) {
+      answer = answer + 'I\n' + space;
+      space = space + ' ';
+    }
+  }
+
+  return answer;
 }
